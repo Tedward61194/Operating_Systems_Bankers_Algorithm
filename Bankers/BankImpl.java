@@ -145,13 +145,13 @@ public class BankImpl implements Bank
 				
 				//FILL IN THE BLANKS HERE!!!!
 				if (!canFinish[j]) {
-					boolean temp = true;
+					boolean b = true;
 					for (int k = 0; k < m; k++) {
 						if (need[j][k] > avail[k]) {
-							temp = false;
+							b = false;
 						}
 					}
-					if (temp) { // if this thread can finish
+					if (b) { // if this thread can finish
 						canFinish[j] = true;
 						for (int x = 0; x < m; x++) {
 							avail[x] += allocation[j][x];
